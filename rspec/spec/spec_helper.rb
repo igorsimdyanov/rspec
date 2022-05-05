@@ -1,5 +1,9 @@
 require_relative 'support/array_builder'
 require_relative 'support/enumerable_shared_examples'
+require_relative '../lib/services/week'
+require_relative '../lib/services/collection_generator'
+
+RSpec::Expectations.configuration.on_potential_false_positives = :nothing
 
 RSpec.configure do |config|
 
