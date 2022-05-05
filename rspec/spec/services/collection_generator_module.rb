@@ -1,3 +1,7 @@
+require_relative '../../lib/services/collection_generator'
+
+RSpec::Expectations.configuration.on_potential_false_positives = :nothing
+
 RSpec.describe Services::CollectionGenerator do
   context 'когда данные корректные' do
     example 'генерацию массива из диапазона' do

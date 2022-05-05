@@ -1,3 +1,7 @@
+require_relative '../../lib/services/collection_generator'
+
+RSpec::Expectations.configuration.on_potential_false_positives = :nothing
+
 RSpec.описание Services::CollectionGenerator, 'in rake-task' do
   в_контексте 'когда успешно выполняется' do
     let(:array_of_ten_elements) { Services::CollectionGenerator.call(1, 10) }
