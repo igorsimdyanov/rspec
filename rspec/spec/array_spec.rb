@@ -4,7 +4,7 @@ RSpec.describe Array do
   #   it(iterator) { expect(empty_arr).to respond_to(iterator) }
   # end
 
-  context 'при обращении к квадратным скобкам' do
+  context 'при обращении к квадратным скобкам', :enumerable do
     let(:arr) { [1, 2, 3, 4, 5] }
 
     it 'можно извлечь значение по индексу' do

@@ -1,7 +1,7 @@
 RSpec.describe Hash do
   it_behaves_like 'Enumerable', Hash
 
-  context 'при обращении к квадратным скобкам' do
+  context 'при обращении к квадратным скобкам', :enumerable do
     let(:hsh) { { fst: :value } }
 
     it 'можно извлечь значение по индексу' do
