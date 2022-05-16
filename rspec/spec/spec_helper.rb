@@ -2,9 +2,8 @@ require 'set'
 require 'rspec/collection_matchers'
 require_relative 'support/array_builder'
 require_relative 'support/enumerable_shared_examples'
-require_relative '../lib/user'
 
-Dir['lib/services/*.rb'].each do |file|
+Dir['lib/**/*.rb'].each do |file|
   require_relative "../#{file}"
 end
 
