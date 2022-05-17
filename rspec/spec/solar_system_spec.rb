@@ -6,6 +6,6 @@ RSpec.describe SolarSystem do
   end
 
   it 'обращение к несуществующему методу' do
-    expect { SolarSystem.wrong }.to raise_error('Wrong planet')
+    expect { described_class.wrong }.to raise_error('Wrong planet')
   end
 end
