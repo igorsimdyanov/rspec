@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Services
   class CollectionGenerator
     attr_accessor :left_border, :right_border

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe Services::CollectionGenerator do
   context 'когда данные корректные' do
     example 'генерацию массива из диапазона' do

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe 'Коллекции в Rspec' do
   it 'можно проверять при помощи матчера start_with' do
     expect([1, 2, 3, 4, 5]).to start_with 1, 2, 3

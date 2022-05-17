@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe 'Коллекции в Rspec' do
   it 'можно проверять при помощи матчера include' do
     expect([1, 2, 3, 4, 5]).to include 3, 5
@@ -6,17 +8,17 @@ RSpec.describe 'Коллекции в Rspec' do
   end
 
   context 'в случае хэшей' do
-    let(:product) {
+    let(:product) do
       {
         name: 'Процессор',
         price: 40_000,
-        id: 534563244
+        id: 534_563_244
       }
-    }
+    end
 
     it 'так же можно проверять при помощи матчера include' do
       expect(product).to include :price
-      expect(product).to include id: 534563244
+      expect(product).to include id: 534_563_244
     end
   end
 end
