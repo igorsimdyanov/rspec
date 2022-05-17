@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'support/array_builder'
 require_relative 'support/enumerable_shared_examples'
 
@@ -8,7 +10,6 @@ end
 RSpec::Expectations.configuration.on_potential_false_positives = :nothing
 
 RSpec.configure do |config|
-
   config.alias_example_group_to 'описание'
   config.alias_example_group_to 'в_контексте'
   config.alias_example_to 'тест'
@@ -24,7 +25,7 @@ RSpec.configure do |config|
     mocks.verify_partial_doubles = true
   end
 
-  config.define_derived_metadata(file_path: /spec\/services/) do |meta|
+  config.define_derived_metadata(file_path: %r{spec/services}) do |meta|
     meta[:fast] = true
   end
 

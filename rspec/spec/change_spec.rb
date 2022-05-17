@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe Array do
   let(:arr) { [1, 2, 3, 4, 5] }
 
