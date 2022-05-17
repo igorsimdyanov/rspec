@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe Set do
   it_behaves_like 'Enumerable', Set
 

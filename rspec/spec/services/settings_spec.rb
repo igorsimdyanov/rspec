@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe Services::Settings, 'in rake-task' do
   def build_settings
     settings = described_class.instance

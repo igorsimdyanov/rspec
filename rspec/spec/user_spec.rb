@@ -1,12 +1,14 @@
+# frozen_string_literal: true
+
 RSpec.describe User do
-  let(:user) {
+  let(:user) do
     User.new(
       email: 'test@test.ru',
       first_name: 'Тест',
       last_name: 'Тестов',
       middle_name: 'Тестович'
     )
-  }
+  end
 
   context 'содержит методы' do
     it :email do
@@ -85,6 +87,6 @@ RSpec.describe User do
     end
     it :middle_name do
       expect { user_wrong_middle_name }.to raise_error('Wrong middle_name parameter')
-    end    
+    end
   end
 end

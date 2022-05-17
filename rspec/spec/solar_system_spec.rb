@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe SolarSystem do
   it 'содержит методы-планеты' do
     %i[mercury venus earth mars jupiter saturn uranus neptune].each_with_index do |planet, i|

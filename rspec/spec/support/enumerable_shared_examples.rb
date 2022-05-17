@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.shared_examples 'Enumerable' do |store_class|
   let(:empty_collection) { store_class.new }
 

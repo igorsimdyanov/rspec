@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class SolarSystem
   class NotExistingPlanetException < RuntimeError; end
 
@@ -13,9 +15,7 @@ class SolarSystem
   ].freeze
 
   def self.method_missing(message)
-    unless PLANETS.include? message.to_sym
-      raise NotExistingPlanetException.new('Wrong planet')
-    end
+    raise NotExistingPlanetException, 'Wrong planet' unless PLANETS.include? message.to_sym
   end
 
   PLANETS.each_with_index do |planet, index|

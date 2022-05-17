@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe Services::CollectionGenerator, 'in rake-task' do
   context 'когда успешно выполняется' do
     let(:array_of_ten_elements) { Services::CollectionGenerator.call(1, 10) }

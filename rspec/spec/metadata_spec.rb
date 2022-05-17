@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe 'Проверяем Metadata', :outer_group do
   it 'в RSpec', :fast, :focus do |example|
     pp example.metadata

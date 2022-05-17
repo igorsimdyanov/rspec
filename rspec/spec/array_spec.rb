@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 RSpec.describe Array do
   it_behaves_like 'Enumerable', Array
   # %i[each map select reject reduce].each do |iterator|
