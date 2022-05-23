@@ -1,4 +1,10 @@
 # frozen_string_literal: true
+require 'rubygems'
+require 'bundler/setup'
+
+Bundler.require(:default)
+
+require 'webmock/rspec'
 
 require_relative 'support/array_builder'
 require_relative 'support/enumerable_shared_examples'
@@ -6,6 +12,8 @@ require_relative 'support/enumerable_shared_examples'
 Dir['lib/**/*.rb'].each do |file|
   require_relative "../#{file}"
 end
+
+require_relative 'support/vcr_setup'
 
 RSpec::Expectations.configuration.on_potential_false_positives = :nothing
 
