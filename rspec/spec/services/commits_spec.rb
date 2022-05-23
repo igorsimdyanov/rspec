@@ -6,13 +6,14 @@ RSpec.describe Services::Commits do
   end
 
   context 'возвращает количество коммитов' do
-    before do
-      json = Array.new(12) { Hash.new }
-      allow(JSON).to receive(:load).and_return(json)
-    end
-
+    # before do
+    #   json = Array.new(12) { Hash.new }
+    #   allow(JSON).to receive(:load).and_return(json)
+    # end
     it :call do
-      expect(described_class.call).to eq 12
+      VCR.use_cassette('github.com', record: :once) do
+        expect(described_class.call).to eq 12
+      end
     end
   end
 end
